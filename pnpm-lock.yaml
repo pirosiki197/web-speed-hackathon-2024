@@ -211,15 +211,6 @@ importers:
       core-js:
         specifier: 3.36.0
         version: 3.36.0
-      es5-shim:
-        specifier: 4.6.7
-        version: 4.6.7
-      es6-shim:
-        specifier: 0.35.8
-        version: 0.35.8
-      es7-shim:
-        specifier: 6.0.0
-        version: 6.0.0
       fzstd:
         specifier: 0.1.0
         version: 0.1.0
@@ -2488,10 +2479,6 @@ packages:
     resolution: {integrity: sha512-Ewyx0c9PmpcsByhSW4r+9zDU7sGjFc86qf/kKtuSCRdhfbk0SNLLkaT5qvcHnRGgc5NP/ly/y+qkXkqONX54CQ==}
     engines: {node: '>= 0.4'}
 
-  array.prototype.reduce@1.0.6:
-    resolution: {integrity: sha512-UW+Mz8LG/sPSU8jRDCjVr6J/ZKAGpHfwrZ6kWTG5qCxIEiXdVshqGnu5vEZA8S1y6X4aCSbQZ0/EEsfvEvBiSg==}
-    engines: {node: '>= 0.4'}
-
   array.prototype.toreversed@1.1.2:
     resolution: {integrity: sha512-wwDCoT4Ck4Cz7sLtgUmzR5UV3YF5mFHUlbChCzZBQZ+0m2cl/DH3tKgvphv1nKgFsJ48oCSg6p91q2Vm0I/ZMA==}
 
@@ -3027,10 +3014,6 @@ packages:
     resolution: {integrity: sha512-BHLqn0klhEpnOKSrzn/Xsz2UIW8j+cGmo9JLzr8BiUapV8hPL9+FliFqjwr9ngW7jWdnxv6eO+/LqyhJVqgrjA==}
     engines: {node: '>=0.10'}
 
-  es5-shim@4.6.7:
-    resolution: {integrity: sha512-jg21/dmlrNQI7JyyA2w7n+yifSxBng0ZralnSfVZjoCawgNTCnS+yBCyVM9DL5itm7SUnDGgv7hcq2XCZX4iRQ==}
-    engines: {node: '>=0.4.0'}
-
   es6-iterator@2.0.3:
     resolution: {integrity: sha512-zw4SRzoUkd+cl+ZoE15A9o1oQd920Bb0iOJMQkQhl3jNc03YqVjAhG7scf9C5KWRU/R13Orf588uCC6525o02g==}
 
@@ -3040,18 +3023,11 @@ packages:
   es6-promisify@5.0.0:
     resolution: {integrity: sha512-C+d6UdsYDk0lMebHNR4S2NybQMMngAOnOwYBQjTOiv0MkoJMP0Myw2mgpDLBcpfCmRLxyFqYhS/CfOENq4SJhQ==}
 
-  es6-shim@0.35.8:
-    resolution: {integrity: sha512-Twf7I2v4/1tLoIXMT8HlqaBSS5H2wQTs2wx3MNYCI8K1R1/clXyCazrcVCPm/FuO9cyV8+leEaZOWD5C253NDg==}
-
   es6-symbol@3.1.3:
     resolution: {integrity: sha512-NJ6Yn3FuDinBaBRWl/q5X/s4koRHBrgKAu+yGI6JCBeiu3qrcbJhwT2GeR/EXVfylRk8dpQVJoLEFhK+Mu31NA==}
 
   es6-weak-map@2.0.3:
     resolution: {integrity: sha512-p5um32HOTO1kP+w7PRnB+5lQ43Z6muuMuIMffvDN8ZB4GcnjLBV6zGStpbASIMk4DCAvEaamhe2zhyCb/QXXsA==}
-
-  es7-shim@6.0.0:
-    resolution: {integrity: sha512-aiQ/QyJBVJbabtsSediM1S4qI+P3p8F5J5YR5o/bH003BCnnclzxK9pi5Qd2Hg01ktAtZCaQBdejHrkOBGwf5Q==}
-    engines: {node: '>=0.4.0'}
 
   esbuild-plugin-polyfill-node@0.3.0:
     resolution: {integrity: sha512-SHG6CKUfWfYyYXGpW143NEZtcVVn8S/WHcEOxk62LuDXnY4Zpmc+WmxJKN6GMTgTClXJXhEM5KQlxKY6YjbucQ==}
@@ -4288,10 +4264,6 @@ packages:
     resolution: {integrity: sha512-UPbPHML6sL8PI/mOqPwsH4G6iyXcCGzLin8KvEPenOZN5lpCNBZZQ+V62vdjB1mQHrmqGQt5/OJzemUA+KJmEA==}
     engines: {node: '>= 0.4'}
 
-  object.getownpropertydescriptors@2.1.7:
-    resolution: {integrity: sha512-PrJz0C2xJ58FNn11XV2lr4Jt5Gzl94qpy9Lu0JlfEj14z88sqbSBJCBEzdlNUCzY2gburhbrwOZ5BHCmuNUy0g==}
-    engines: {node: '>= 0.8'}
-
   object.groupby@1.0.2:
     resolution: {integrity: sha512-bzBq58S+x+uo0VjurFT0UktpKHOZmv4/xePiOA1nbB9pMqpGK7rUPNgf+1YC+7mE+0HzhTMqNUuCqvKhj6FnBw==}
 
@@ -4785,10 +4757,6 @@ packages:
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
 
-  safe-array-concat@1.0.1:
-    resolution: {integrity: sha512-6XbUAseYE2KtOuGueyeobCySj9L4+66Tn6KQMOPQJrAJEowYKW/YR/MGJZl7FdydUdaFu4LYyDZjxf4/Nmo23Q==}
-    engines: {node: '>=0.4'}
-
   safe-array-concat@1.1.2:
     resolution: {integrity: sha512-vj6RsCsWBCf19jIeHEfkRMw8DPiBb+DMXklQ/1SGDHOMlHdPUkZXFQ2YdplS23zESTijAcurb1aSgJA3AgMu1Q==}
     engines: {node: '>=0.4'}
@@ -4961,11 +4929,6 @@ packages:
     resolution: {integrity: sha512-KFxaM7XT+irxvdqSP1LGLgNWbYN7ay5owZ3r/8t77p+EtSUAfUgtl7be3xtqtOmGUl9K9YPO2ca8133RlTjvKw==}
     engines: {node: '>=8.0'}
 
-  string-at@1.1.0:
-    resolution: {integrity: sha512-jCpPowWKBn0NFdvtmK2qxK40Ol4jPcgCt8qYnKpPx6B5eDwHMDhRvq9MCsDEgsOTNtbXY6beAMHMRT2qPJXllA==}
-    engines: {node: '>= 0.4'}
-    deprecated: The original `String.prototype.at` proposal has been replaced by a new one; please use v1 or later of `string.prototype.at` instead
-
   string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
     engines: {node: '>=8'}
@@ -4977,28 +4940,12 @@ packages:
   string.prototype.matchall@4.0.10:
     resolution: {integrity: sha512-rGXbGmOEosIQi6Qva94HUjgPs9vKW+dkG7Y8Q5O2OYkWL6wFaTRZO8zM4mhP94uX55wgyrXzfS2aGtGzUL7EJQ==}
 
-  string.prototype.padend@3.1.5:
-    resolution: {integrity: sha512-DOB27b/2UTTD+4myKUFh+/fXWcu/UDyASIXfg+7VzoCNNGOfWvoyU/x5pvVHr++ztyt/oSYI1BcWBBG/hmlNjA==}
-    engines: {node: '>= 0.4'}
-
-  string.prototype.padstart@3.1.5:
-    resolution: {integrity: sha512-R57IsE3JIfModQWrVXYZ8ZHWMBNDpIoniDwhYCR1nx+iHwDkjjk26a8xM9BYgf7SAXJO7sdNPng5J+0ccr5LFQ==}
-    engines: {node: '>= 0.4'}
-
   string.prototype.trim@1.2.8:
     resolution: {integrity: sha512-lfjY4HcixfQXOfaqCvcBuOIapyaroTXhbkfJN3gcB1OtyupngWK4sEET9Knd0cXd28kTUqu/kHoV4HKSJdnjiQ==}
     engines: {node: '>= 0.4'}
 
   string.prototype.trimend@1.0.7:
     resolution: {integrity: sha512-Ni79DqeB72ZFq1uH/L6zJ+DKZTkOtPIHovb3YZHQViE+HDouuU4mBrLOLDn5Dde3RF8qw5qVETEjhu9locMLvA==}
-
-  string.prototype.trimleft@2.1.3:
-    resolution: {integrity: sha512-699Ibssmj/awVzvdNk4g83/Iu8U9vDohzmA/ly2BrQWGhamuY4Tlvs5XKmKliDt3ky6SKbE1bzPhASKCFlx9Sg==}
-    engines: {node: '>= 0.4'}
-
-  string.prototype.trimright@2.1.3:
-    resolution: {integrity: sha512-hoOq56oRFnnfDuXNy2lGHiwT77MehHv9d0zGfRZ8QdC+4zjrkFB9vd5i/zYTd/ymFBd4YxtbdgHt3U6ksGeuBw==}
-    engines: {node: '>= 0.4'}
 
   string.prototype.trimstart@1.0.7:
     resolution: {integrity: sha512-NGhtDFu3jCEm7B4Fy0DpLewdJQOZcQ0rGbwQ/+stjnrp2i+rlKeCvos9hOIeCmqwratM47OBxY7uFZzjxHXmrg==}
@@ -5557,7 +5504,7 @@ snapshots:
   '@3846masa/configs@https://codeload.github.com/3846masa/configs/tar.gz/0e9352c7ad57e51187647f2c4aa27baea842d149':
     dependencies:
       '@tsconfig/strictest': 2.0.3
-      '@typescript-eslint/eslint-plugin': 7.2.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.2))(eslint@8.57.0)(typescript@5.4.2)
+      '@typescript-eslint/eslint-plugin': 7.2.0(@typescript-eslint/parser@7.2.0(eslint@8.56.0)(typescript@5.4.2))(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser': 7.2.0(eslint@8.57.0)(typescript@5.4.2)
       better-typescript-lib: 2.6.0(typescript@5.4.2)
       eslint: 8.57.0
@@ -7489,7 +7436,7 @@ snapshots:
 
   '@types/webxr@0.5.14': {}
 
-  '@typescript-eslint/eslint-plugin@7.2.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.2))(eslint@8.57.0)(typescript@5.4.2)':
+  '@typescript-eslint/eslint-plugin@7.2.0(@typescript-eslint/parser@7.2.0(eslint@8.56.0)(typescript@5.4.2))(eslint@8.57.0)(typescript@5.4.2)':
     dependencies:
       '@eslint-community/regexpp': 4.10.0
       '@typescript-eslint/parser': 7.2.0(eslint@8.57.0)(typescript@5.4.2)
@@ -7778,14 +7725,6 @@ snapshots:
       define-properties: 1.2.1
       es-abstract: 1.22.5
       es-shim-unscopables: 1.0.2
-
-  array.prototype.reduce@1.0.6:
-    dependencies:
-      call-bind: 1.0.7
-      define-properties: 1.2.1
-      es-abstract: 1.22.5
-      es-array-method-boxes-properly: 1.0.0
-      is-string: 1.0.7
 
   array.prototype.toreversed@1.1.2:
     dependencies:
@@ -8395,8 +8334,6 @@ snapshots:
       es6-symbol: 3.1.3
       next-tick: 1.1.0
 
-  es5-shim@4.6.7: {}
-
   es6-iterator@2.0.3:
     dependencies:
       d: 1.0.1
@@ -8411,8 +8348,6 @@ snapshots:
       es6-promise: 4.2.8
     optional: true
 
-  es6-shim@0.35.8: {}
-
   es6-symbol@3.1.3:
     dependencies:
       d: 1.0.1
@@ -8424,18 +8359,6 @@ snapshots:
       es5-ext: 0.10.62
       es6-iterator: 2.0.3
       es6-symbol: 3.1.3
-
-  es7-shim@6.0.0:
-    dependencies:
-      array-includes: 3.1.7
-      object.entries: 1.1.7
-      object.getownpropertydescriptors: 2.1.7
-      object.values: 1.1.7
-      string-at: 1.1.0
-      string.prototype.padend: 3.1.5
-      string.prototype.padstart: 3.1.5
-      string.prototype.trimleft: 2.1.3
-      string.prototype.trimright: 2.1.3
 
   esbuild-plugin-polyfill-node@0.3.0(esbuild@0.19.11):
     dependencies:
@@ -9948,14 +9871,6 @@ snapshots:
       define-properties: 1.2.1
       es-abstract: 1.22.5
 
-  object.getownpropertydescriptors@2.1.7:
-    dependencies:
-      array.prototype.reduce: 1.0.6
-      call-bind: 1.0.7
-      define-properties: 1.2.1
-      es-abstract: 1.22.5
-      safe-array-concat: 1.0.1
-
   object.groupby@1.0.2:
     dependencies:
       array.prototype.filter: 1.0.3
@@ -10454,13 +10369,6 @@ snapshots:
     dependencies:
       queue-microtask: 1.2.3
 
-  safe-array-concat@1.0.1:
-    dependencies:
-      call-bind: 1.0.7
-      get-intrinsic: 1.2.4
-      has-symbols: 1.0.3
-      isarray: 2.0.5
-
   safe-array-concat@1.1.2:
     dependencies:
       call-bind: 1.0.7
@@ -10656,11 +10564,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  string-at@1.1.0:
-    dependencies:
-      define-properties: 1.2.1
-      es-abstract: 1.22.5
-
   string-width@4.2.3:
     dependencies:
       emoji-regex: 8.0.0
@@ -10685,18 +10588,6 @@ snapshots:
       set-function-name: 2.0.1
       side-channel: 1.0.4
 
-  string.prototype.padend@3.1.5:
-    dependencies:
-      call-bind: 1.0.5
-      define-properties: 1.2.1
-      es-abstract: 1.22.3
-
-  string.prototype.padstart@3.1.5:
-    dependencies:
-      call-bind: 1.0.7
-      define-properties: 1.2.1
-      es-abstract: 1.22.5
-
   string.prototype.trim@1.2.8:
     dependencies:
       call-bind: 1.0.7
@@ -10708,18 +10599,6 @@ snapshots:
       call-bind: 1.0.7
       define-properties: 1.2.1
       es-abstract: 1.22.5
-
-  string.prototype.trimleft@2.1.3:
-    dependencies:
-      call-bind: 1.0.7
-      define-properties: 1.2.1
-      string.prototype.trimstart: 1.0.7
-
-  string.prototype.trimright@2.1.3:
-    dependencies:
-      call-bind: 1.0.7
-      define-properties: 1.2.1
-      string.prototype.trimend: 1.0.7
 
   string.prototype.trimstart@1.0.7:
     dependencies:

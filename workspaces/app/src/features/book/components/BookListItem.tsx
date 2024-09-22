@@ -29,7 +29,7 @@ const _ImgWrapper = styled.div`
 `;
 
 type Props = {
-  book: Omit<GetBookResponse, 'author' | 'nameRuby'>;
+  book: Omit<GetBookResponse, 'author' | 'nameRuby' | 'episodes'>;
 };
 
 export const BookListItem: React.FC<Props> = ({ book }) => {

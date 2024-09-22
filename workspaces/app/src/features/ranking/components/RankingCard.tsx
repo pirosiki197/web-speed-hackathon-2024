@@ -39,7 +39,7 @@ const _AvatarWrapper = styled.div`
 `;
 
 type Props = {
-  book: Omit<GetBookResponse, 'nameRuby'>;
+  book: Omit<GetBookResponse, 'nameRuby' | 'episodes'>;
 };
 
 const RankingCard: React.FC<Props> = ({ book }) => {
