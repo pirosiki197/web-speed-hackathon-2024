@@ -3,17 +3,17 @@ import fs from 'node:fs/promises';
 import { Hono } from 'hono';
 import { HTTPException } from 'hono/http-exception';
 import jsesc from 'jsesc';
-import moment from 'moment-timezone';
+// import moment from 'moment-timezone';
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
 import { ServerStyleSheet } from 'styled-components';
-import { unstable_serialize } from 'swr';
+// import { unstable_serialize } from 'swr';
 
-import { featureApiClient } from '@wsh-2024/app/src/features/feature/apiClient/featureApiClient';
-import { rankingApiClient } from '@wsh-2024/app/src/features/ranking/apiClient/rankingApiClient';
-import { releaseApiClient } from '@wsh-2024/app/src/features/release/apiClient/releaseApiClient';
+// import { featureApiClient } from '@wsh-2024/app/src/features/feature/apiClient/featureApiClient';
+// import { rankingApiClient } from '@wsh-2024/app/src/features/ranking/apiClient/rankingApiClient';
+// import { releaseApiClient } from '@wsh-2024/app/src/features/release/apiClient/releaseApiClient';
 import { ClientApp } from '@wsh-2024/app/src/index';
-import { getDayOfWeekStr } from '@wsh-2024/app/src/lib/date/getDayOfWeekStr';
+// import { getDayOfWeekStr } from '@wsh-2024/app/src/lib/date/getDayOfWeekStr';
 
 import { INDEX_HTML_PATH } from '../../constants/paths';
 
@@ -22,21 +22,21 @@ const app = new Hono();
 async function createInjectDataStr(): Promise<Record<string, unknown>> {
   const json: Record<string, unknown> = {};
 
-  {
-    const dayOfWeek = getDayOfWeekStr(moment());
-    const releases = await releaseApiClient.fetch({ params: { dayOfWeek } });
-    json[unstable_serialize(releaseApiClient.fetch$$key({ params: { dayOfWeek } }))] = releases;
-  }
+  // {
+  //   const dayOfWeek = getDayOfWeekStr(moment());
+  //   const releases = await releaseApiClient.fetch({ params: { dayOfWeek } });
+  //   json[unstable_serialize(releaseApiClient.fetch$$key({ params: { dayOfWeek } }))] = releases;
+  // }
 
-  {
-    const features = await featureApiClient.fetchList({ query: {} });
-    json[unstable_serialize(featureApiClient.fetchList$$key({ query: {} }))] = features;
-  }
+  // {
+  //   const features = await featureApiClient.fetchList({ query: {} });
+  //   json[unstable_serialize(featureApiClient.fetchList$$key({ query: {} }))] = features;
+  // }
 
-  {
-    const ranking = await rankingApiClient.fetchList({ query: {} });
-    json[unstable_serialize(rankingApiClient.fetchList$$key({ query: {} }))] = ranking;
-  }
+  // {
+  //   const ranking = await rankingApiClient.fetchList({ query: {} });
+  //   json[unstable_serialize(rankingApiClient.fetchList$$key({ query: {} }))] = ranking;
+  // }
 
   return json;
 }
