@@ -18,4 +18,4 @@ ENV PORT 8000
 EXPOSE 8000
 
 ENTRYPOINT ["pnpm"]
-CMD ["start"]
+CMD ["run", "start"]

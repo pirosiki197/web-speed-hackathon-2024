@@ -2,7 +2,14 @@ import { encoding } from '@hapi/accept';
 import { ZstdInit } from '@oneidentity/zstd-js/asm/index.cjs.js';
 import { createMiddleware } from 'hono/factory';
 
-const compressibleTypes = ['text/html', 'text/plain', 'text/css', 'application/json', 'application/javascript', 'image/svg+xml'];
+const compressibleTypes = [
+  'text/html',
+  'text/plain',
+  'text/css',
+  'application/json',
+  'application/javascript',
+  'image/svg+xml',
+];
 
 const zstdInit = ZstdInit();
 
