@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { Mesh, OrthographicCamera, PlaneGeometry, Scene, ShaderMaterial, TextureLoader, WebGLRenderer } from 'three';
 
 const _Wrapper = styled.div`
   aspect-ratio: 16 / 9;
@@ -14,7 +13,6 @@ const _Image = styled.img`
 
 export const HeroImage: React.FC = () => {
   const imageRef = useRef<HTMLImageElement | null>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(document.createElement('canvas'));
 
   const updateImage = useCallback(({ height, src, width }: { height: number; src: string; width: number }) => {
     const image = imageRef.current;
@@ -32,61 +30,18 @@ export const HeroImage: React.FC = () => {
       return;
     }
 
-    // width が 4096 / dpr の 16:9 の画像として描画する。
     const dpr = window.devicePixelRatio;
     const width = 4096 / dpr;
     const height = (width / 16) * 9;
     const imageWidth = image.clientWidth;
     const imageHeight = (imageWidth / 16) * 9;
 
-    const scene = new Scene();
-    const camera = new OrthographicCamera(-1, 1, 1, -1, 1, 1000);
-    camera.position.set(0, 0, 100);
-    camera.lookAt(scene.position);
-
-    const textureLoader = new TextureLoader();
-
     const cyberToonImage = '1c7027b8-eeb3-4f86-ad67-bba20e2c3e81.webp';
-    textureLoader.load(`/images/${cyberToonImage}?height=${height}&width=${width}`, (texture) => {
-      const geometry = new PlaneGeometry(2, 2);
-      const material = new ShaderMaterial({
-        fragmentShader: `uniform sampler2D tImage;
-varying vec2 vUv;
-void main() {
-  float aspectRatio = float(textureSize(tImage, 0).x / textureSize(tImage, 0).y);
-  vec2 uv = vec2(
-      (vUv.x - 0.5) / min(aspectRatio, 1.0) + 0.5,
-      (vUv.y - 0.5) / min(1.0 / aspectRatio, 1.0) + 0.5
-  );
-  gl_FragColor = texture2D(tImage, vUv);
-}`,
-        uniforms: {
-          tImage: { value: texture },
-        },
-        vertexShader: `varying vec2 vUv;
-void main() {
-  vUv = uv;
-  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-}`,
-      });
-      const mesh = new Mesh(geometry, material);
-      scene.add(mesh);
 
-      const renderer = new WebGLRenderer({ alpha: true, antialias: true, canvas: canvasRef.current });
-      renderer.setPixelRatio(window.devicePixelRatio);
-      renderer.setSize(width, height);
-
-      const animate = () => {
-        requestAnimationFrame(animate);
-        renderer.render(scene, camera);
-      };
-      animate();
-
-      updateImage({
-        height: imageHeight,
-        src: canvasRef.current.toDataURL(),
-        width: imageWidth,
-      });
+    updateImage({
+      height: imageHeight,
+      src: `/images/${cyberToonImage}?height=${height}&width=${width}`,
+      width: imageWidth,
     });
   }, [imageRef, updateImage]);
 
@@ -99,9 +54,10 @@ void main() {
 
       const width = image.clientWidth;
       const height = (image.clientWidth / 16) * 9;
+
       updateImage({
         height,
-        src: canvasRef.current.toDataURL(),
+        src: image.src, // Re-use the existing src
         width,
       });
     };

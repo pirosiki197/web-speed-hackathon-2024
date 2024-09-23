@@ -4,8 +4,11 @@ import { serveStatic } from '@hono/node-server/serve-static';
 import { Hono } from 'hono';
 
 import { CLIENT_STATIC_PATH } from '../../constants/paths';
+import { compressAllMiddleware } from '../../middlewares/compressMiddleware';
 
 const app = new Hono();
+
+app.use(compressAllMiddleware);
 
 app.use(
   '*',

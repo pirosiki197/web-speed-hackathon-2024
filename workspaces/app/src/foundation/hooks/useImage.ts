@@ -11,7 +11,7 @@ export const useImage = ({ height, imageId, width }: { height: number; imageId: 
       height: height * dpr,
       imageId,
       width: width * dpr,
-    })
+    });
 
     // const img = new Image();
     // img.src = getImageUrl({
