@@ -46,8 +46,8 @@ export const HeroImage: React.FC = () => {
 
     const textureLoader = new TextureLoader();
 
-    const cyberToonPng = '1c7027b8-eeb3-4f86-ad67-bba20e2c3e81.png';
-    textureLoader.load(`/images/${cyberToonPng}?height=${height}&width=${width}`, (texture) => {
+    const cyberToonImage = '1c7027b8-eeb3-4f86-ad67-bba20e2c3e81.webp';
+    textureLoader.load(`/images/${cyberToonImage}?height=${height}&width=${width}`, (texture) => {
       const geometry = new PlaneGeometry(2, 2);
       const material = new ShaderMaterial({
         fragmentShader: `uniform sampler2D tImage;
