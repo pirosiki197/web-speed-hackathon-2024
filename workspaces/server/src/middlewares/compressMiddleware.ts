@@ -17,6 +17,11 @@ const zstdInit = ZstdInit();
 export const compressMiddleware = createMiddleware(async (c, next) => {
   await next();
 
+  // content is already compressed
+  if (c.res.headers.has('X-Content-Encoding')) {
+    return;
+  }
+
   let contentType = c.res.headers.get('Content-Type');
   if (!contentType) {
     const url = new URL(c.req.url);

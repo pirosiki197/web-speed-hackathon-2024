@@ -8,6 +8,7 @@ import { compressMiddleware } from '../middlewares/compressMiddleware';
 
 import { adminApp } from './admin';
 import { apiApp } from './api';
+import { constantsApp } from './constants';
 import { imageApp } from './image';
 import { ssrApp } from './ssr';
 import { staticApp } from './static';
@@ -34,6 +35,7 @@ app.route('/', staticApp);
 app.route('/', imageApp);
 app.route('/', apiApp);
 app.route('/', adminApp);
+app.route('/', constantsApp);
 app.route('/', ssrApp);
 
 app.onError((cause) => {

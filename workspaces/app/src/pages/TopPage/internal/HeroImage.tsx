@@ -2,8 +2,6 @@ import { useCallback, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { Mesh, OrthographicCamera, PlaneGeometry, Scene, ShaderMaterial, TextureLoader, WebGLRenderer } from 'three';
 
-import { IMAGE_SRC } from './ImageSrc';
-
 const _Wrapper = styled.div`
   aspect-ratio: 16 / 9;
   width: 100%;
@@ -35,7 +33,8 @@ export const HeroImage: React.FC = () => {
     }
 
     // width が 4096 / dpr の 16:9 の画像として描画する。
-    const width = 4096 / window.devicePixelRatio;
+    const dpr = window.devicePixelRatio;
+    const width = 4096 / dpr;
     const height = (width / 16) * 9;
     const imageWidth = image.clientWidth;
     const imageHeight = (imageWidth / 16) * 9;
@@ -47,7 +46,8 @@ export const HeroImage: React.FC = () => {
 
     const textureLoader = new TextureLoader();
 
-    textureLoader.load(IMAGE_SRC, (texture) => {
+    const cyberToonPng = '1c7027b8-eeb3-4f86-ad67-bba20e2c3e81.png';
+    textureLoader.load(`/images/${cyberToonPng}?height=${height}&width=${width}`, (texture) => {
       const geometry = new PlaneGeometry(2, 2);
       const material = new ShaderMaterial({
         fragmentShader: `uniform sampler2D tImage;

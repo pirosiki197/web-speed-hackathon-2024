@@ -3,11 +3,6 @@ import React, { useId } from 'react';
 import styled from 'styled-components';
 
 import { DialogContentAtom } from '../atoms/DialogContentAtom';
-import { COMPANY } from '../constants/Company';
-import { CONTACT } from '../constants/Contact';
-import { OVERVIEW } from '../constants/Overview';
-import { QUESTION } from '../constants/Question';
-import { TERM } from '../constants/Term';
 import { Color, Space, Typography } from '../styles/variables';
 
 import { Box } from './Box';
@@ -40,73 +35,93 @@ export const Footer: React.FC = () => {
   const updateDialogContent = useSetAtom(DialogContentAtom);
 
   const handleRequestToTermDialogOpen = () => {
-    updateDialogContent(
-      <_Content aria-labelledby={termDialogA11yId} role="dialog">
-        <Text as="h2" color={Color.MONO_100} id={termDialogA11yId} typography={Typography.NORMAL16}>
-          利用規約
-        </Text>
-        <Spacer height={Space * 1} />
-        <Text as="p" color={Color.MONO_100} typography={Typography.NORMAL12}>
-          {TERM}
-        </Text>
-      </_Content>,
-    );
+    fetch('/constants/term')
+      .then((res) => res.text())
+      .then((term) => {
+        updateDialogContent(
+          <_Content aria-labelledby={termDialogA11yId} role="dialog">
+            <Text as="h2" color={Color.MONO_100} id={termDialogA11yId} typography={Typography.NORMAL16}>
+              利用規約
+            </Text>
+            <Spacer height={Space * 1} />
+            <Text as="p" color={Color.MONO_100} typography={Typography.NORMAL12}>
+              {term}
+            </Text>
+          </_Content>,
+        );
+      });
   };
 
   const handleRequestToContactDialogOpen = () => {
-    updateDialogContent(
-      <_Content aria-labelledby={contactDialogA11yId} role="dialog">
-        <Text as="h2" color={Color.MONO_100} id={contactDialogA11yId} typography={Typography.NORMAL16}>
-          お問い合わせ
-        </Text>
-        <Spacer height={Space * 1} />
-        <Text as="p" color={Color.MONO_100} typography={Typography.NORMAL12}>
-          {CONTACT}
-        </Text>
-      </_Content>,
-    );
+    fetch('/constants/contact')
+      .then((res) => res.text())
+      .then((contact) => {
+        updateDialogContent(
+          <_Content aria-labelledby={contactDialogA11yId} role="dialog">
+            <Text as="h2" color={Color.MONO_100} id={contactDialogA11yId} typography={Typography.NORMAL16}>
+              お問い合わせ
+            </Text>
+            <Spacer height={Space * 1} />
+            <Text as="p" color={Color.MONO_100} typography={Typography.NORMAL12}>
+              {contact}
+            </Text>
+          </_Content>,
+        );
+      });
   };
 
   const handleRequestToQuestionDialogOpen = () => {
-    updateDialogContent(
-      <_Content aria-labelledby={questionDialogA11yId} role="dialog">
-        <Text as="h2" color={Color.MONO_100} id={questionDialogA11yId} typography={Typography.NORMAL16}>
-          Q&A
-        </Text>
-        <Spacer height={Space * 1} />
-        <Text as="p" color={Color.MONO_100} typography={Typography.NORMAL12}>
-          {QUESTION}
-        </Text>
-      </_Content>,
-    );
+    fetch('/constants/question')
+      .then((res) => res.text())
+      .then((question) => {
+        updateDialogContent(
+          <_Content aria-labelledby={questionDialogA11yId} role="dialog">
+            <Text as="h2" color={Color.MONO_100} id={questionDialogA11yId} typography={Typography.NORMAL16}>
+              Q&A
+            </Text>
+            <Spacer height={Space * 1} />
+            <Text as="p" color={Color.MONO_100} typography={Typography.NORMAL12}>
+              {question}
+            </Text>
+          </_Content>,
+        );
+      });
   };
 
   const handleRequestToCompanyDialogOpen = () => {
-    updateDialogContent(
-      <_Content aria-labelledby={companyDialogA11yId} role="dialog">
-        <Text as="h2" color={Color.MONO_100} id={companyDialogA11yId} typography={Typography.NORMAL16}>
-          運営会社
-        </Text>
-        <Spacer height={Space * 1} />
-        <Text as="p" color={Color.MONO_100} typography={Typography.NORMAL12}>
-          {COMPANY}
-        </Text>
-      </_Content>,
-    );
+    fetch('/constants/company')
+      .then((res) => res.text())
+      .then((company) => {
+        updateDialogContent(
+          <_Content aria-labelledby={companyDialogA11yId} role="dialog">
+            <Text as="h2" color={Color.MONO_100} id={companyDialogA11yId} typography={Typography.NORMAL16}>
+              運営会社
+            </Text>
+            <Spacer height={Space * 1} />
+            <Text as="p" color={Color.MONO_100} typography={Typography.NORMAL12}>
+              {company}
+            </Text>
+          </_Content>,
+        );
+      });
   };
 
   const handleRequestToOverviewDialogOpen = () => {
-    updateDialogContent(
-      <_Content aria-labelledby={overviewDialogA11yId} role="dialog">
-        <Text as="h2" color={Color.MONO_100} id={overviewDialogA11yId} typography={Typography.NORMAL16}>
-          Cyber TOONとは
-        </Text>
-        <Spacer height={Space * 1} />
-        <Text as="p" color={Color.MONO_100} typography={Typography.NORMAL12}>
-          {OVERVIEW}
-        </Text>
-      </_Content>,
-    );
+    fetch('/constants/overview')
+      .then((res) => res.text())
+      .then((overview) => {
+        updateDialogContent(
+          <_Content aria-labelledby={overviewDialogA11yId} role="dialog">
+            <Text as="h2" color={Color.MONO_100} id={overviewDialogA11yId} typography={Typography.NORMAL16}>
+              Cyber TOONとは
+            </Text>
+            <Spacer height={Space * 1} />
+            <Text as="p" color={Color.MONO_100} typography={Typography.NORMAL12}>
+              {overview}
+            </Text>
+          </_Content>,
+        );
+      });
   };
 
   return (
