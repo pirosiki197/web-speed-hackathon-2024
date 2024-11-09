@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { Mesh, OrthographicCamera, PlaneGeometry, Scene, ShaderMaterial, TextureLoader, WebGLRenderer } from 'three';
 
-import { IMAGE_SRC } from './ImageSrc';
+// import { IMAGE_SRC } from './ImageSrc';
 
 const _Wrapper = styled.div`
   aspect-ratio: 16 / 9;
@@ -47,7 +47,7 @@ export const HeroImage: React.FC = () => {
 
     const textureLoader = new TextureLoader();
 
-    textureLoader.load(IMAGE_SRC, (texture) => {
+    textureLoader.load('/assets/hero.webp', (texture) => {
       const geometry = new PlaneGeometry(2, 2);
       const material = new ShaderMaterial({
         fragmentShader: `uniform sampler2D tImage;
