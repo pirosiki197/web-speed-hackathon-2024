@@ -5,7 +5,8 @@
     "build": "pnpm run build:clean && pnpm run build:tsup && pnpm run build:copy",
     "build:clean": "rm -rf ./dist",
     "build:copy": "cp -r ./assets ./dist/assets",
-    "build:tsup": "tsup"
+    "build:tsup": "tsup",
+    "analyze": "source-map-explorer 'dist/client.global.js' --html out.html --no-border-checks"
   },
   "dependencies": {
     "@jsquash/jxl": "1.1.0",
@@ -13,8 +14,6 @@
     "@wsh-2024/admin": "workspace:*",
     "@wsh-2024/app": "workspace:*",
     "core-js": "3.36.0",
-    "es5-shim": "4.6.7",
-    "es6-shim": "0.35.8",
     "es7-shim": "6.0.0",
     "fzstd": "0.1.0",
     "jimp": "0.22.12",
@@ -38,6 +37,8 @@
     "@types/serviceworker": "0.0.83",
     "esbuild-plugin-polyfill-node": "0.3.0",
     "pkg-dir": "5.0.0",
+    "source-map-explorer": "2.5.3",
+    "terser": "5.36.0",
     "tsup": "8.0.1"
   }
 }
