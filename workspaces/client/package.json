@@ -14,8 +14,6 @@
     "@wsh-2024/admin": "workspace:*",
     "@wsh-2024/app": "workspace:*",
     "bmp-js": "0.1.0",
-    "core-js": "3.36.0",
-    "es7-shim": "6.0.0",
     "fzstd": "0.1.0",
     "jquery": "3.7.1",
     "p-queue": "8.0.1",
