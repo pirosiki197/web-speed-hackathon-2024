@@ -135,7 +135,7 @@ export const HeroImage: React.FC = () => {
 
   return (
     <_Wrapper>
-      <_Image ref={imageRef} alt="Cyber TOON" />
+      <_Image ref={imageRef} alt="Cyber TOON" loading='eager' />
     </_Wrapper>
   );
 };
