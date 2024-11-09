@@ -1,9 +1,10 @@
 // @ts-expect-error - This is a workaround for the missing type definition
 import jsquashWasmBinary from '@jsquash/jxl/codec/dec/jxl_dec.wasm';
 import { init as jsquashInit } from '@jsquash/jxl/decode';
-import 'jimp';
+// @ts-expect-error - no definition
+import * as bmp from 'bmp-js';
 
-declare const Jimp: typeof import('jimp');
+// declare const Jimp: typeof import('jimp');
 
 export async function transformJpegXLToBmp(response: Response): Promise<Response> {
   const { decode } = await jsquashInit(undefined, {
@@ -12,7 +13,7 @@ export async function transformJpegXLToBmp(response: Response): Promise<Response
   });
 
   const imageData = decode(await response.arrayBuffer())!;
-  const bmpBinary = await new Jimp(imageData).getBufferAsync(Jimp.MIME_BMP);
+  const bmpBinary = bmp.encode(imageData);
 
   return new Response(bmpBinary, {
     headers: {

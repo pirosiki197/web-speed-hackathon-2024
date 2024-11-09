@@ -6,17 +6,17 @@
     "build:clean": "rm -rf ./dist",
     "build:copy": "cp -r ./assets ./dist/assets",
     "build:tsup": "tsup",
-    "analyze": "source-map-explorer 'dist/client.global.js' --html out.html --no-border-checks"
+    "analyze": "source-map-explorer 'dist/*.js' --html out.html --no-border-checks"
   },
   "dependencies": {
     "@jsquash/jxl": "1.1.0",
     "@webcomponents/webcomponentsjs": "2.8.0",
     "@wsh-2024/admin": "workspace:*",
     "@wsh-2024/app": "workspace:*",
+    "bmp-js": "0.1.0",
     "core-js": "3.36.0",
     "es7-shim": "6.0.0",
     "fzstd": "0.1.0",
-    "jimp": "0.22.12",
     "jquery": "3.7.1",
     "p-queue": "8.0.1",
     "path-browserify": "1.0.1",
@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "@node-kit/pnpm-workspace-root": "3.2.0",
-    "@types/jimp": "0.2.28",
     "@types/jquery": "3.5.29",
     "@types/path-browserify": "1.0.2",
     "@types/react": "18.2.0",
