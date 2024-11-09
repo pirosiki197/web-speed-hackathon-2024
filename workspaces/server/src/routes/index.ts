@@ -8,6 +8,11 @@ import { compressMiddleware } from '../middlewares/compressMiddleware';
 
 import { adminApp } from './admin';
 import { apiApp } from './api';
+import { COMPANY } from './constants/Company';
+import { CONTACT } from './constants/Contact';
+import { OVERVIEW } from './constants/Overview';
+import { QUESTION } from './constants/Question';
+import { TERM } from './constants/Term';
 import { imageApp } from './image';
 import { ssrApp } from './ssr';
 import { staticApp } from './static';
@@ -30,6 +35,21 @@ app.use(cacheControlMiddleware);
 app.get('/healthz', (c) => {
   return c.body('live', 200);
 });
+app.get('/const/company', (c) => {
+  return c.text(COMPANY, 200);
+})
+app.get('/const/contact', (c) => {
+  return c.text(CONTACT, 200);
+})
+app.get('/const/overview', (c) => {
+  return c.text(OVERVIEW, 200);
+})
+app.get('/const/question', (c) => {
+  return c.text(QUESTION, 200);
+})
+app.get('/const/term', (c) => {
+  return c.text(TERM, 200);
+})
 app.route('/', staticApp);
 app.route('/', imageApp);
 app.route('/', apiApp);
