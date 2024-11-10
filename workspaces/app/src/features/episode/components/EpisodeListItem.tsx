@@ -7,9 +7,8 @@ import { Link } from '../../../foundation/components/Link';
 import { Separator } from '../../../foundation/components/Separator';
 import { Spacer } from '../../../foundation/components/Spacer';
 import { Text } from '../../../foundation/components/Text';
-import { useImage } from '../../../foundation/hooks/useImage';
 import { Color, Radius, Space, Typography } from '../../../foundation/styles/variables';
-import { useEpisode } from '../hooks/useEpisode';
+import { getImageUrl } from '../../../lib/image/getImageUrl';
 
 const _Wrapper = styled.li`
   width: 100%;
@@ -29,13 +28,20 @@ const _ImgWrapper = styled.div`
 
 type Props = {
   bookId: string;
-  episodeId: string;
+  episode: {
+    chapter: number;
+    description: string;
+    id: string;
+    image: {
+      id: string;
+    };
+    name: string;
+  }
 };
 
-export const EpisodeListItem: React.FC<Props> = ({ bookId, episodeId }) => {
-  const { data: episode } = useEpisode({ params: { episodeId } });
-
-  const imageUrl = useImage({ height: 96, imageId: episode.image.id, width: 96 });
+export const EpisodeListItem: React.FC<Props> = ({ bookId, episode }) => {
+  // const imageUrl = useImage({ height: 96, imageId: episode.image.id, width: 96 });
+  const imageUrl = getImageUrl({format: 'webp', imageId: episode.image.id});
 
   return (
     <_Wrapper>
